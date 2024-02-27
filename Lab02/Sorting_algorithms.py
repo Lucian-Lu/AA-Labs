@@ -152,7 +152,7 @@ def make_array(size, arr=None) -> []:
         arr.append(random.randint(0, size))
     return arr
 
-# Writing the original array to the json file
+# Writing the arrays to the json file
 def write_to_json_file(file_path, data):
     with open(file_path, "w+") as json_file:
         json.dump(data, json_file, indent=4)
@@ -176,8 +176,8 @@ def plot_execution_times(iterations, execution_times_shell, execution_times_quic
 file_path = "./Array_to_sort.json"
 size = 10000
 count = 25
-
 execution_times = []
+
 for i in range(count):
     arr = []
     arr = make_array(size, arr)
